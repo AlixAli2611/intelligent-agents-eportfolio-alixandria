@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testing and Remediation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav><a href="index.html">Home</a></nav>
+<h1>Testing and Remediation</h1>
+
+<p>The final implementation was tested using pytest and produced 24 passing tests.</p>
+
+<h2>Testing Covered</h2>
+<ul>
+  <li>Planning agent behaviour</li>
+  <li>Processing agent output</li>
+  <li>Ranking and recommendation logic</li>
+  <li>Evidence assessment</li>
+  <li>Markdown and JSON output generation</li>
+  <li>SQLite persistence</li>
+  <li>LLM JSON validation and fallback logic</li>
+</ul>
+
+<h2>Remediation Activities</h2>
+<ul>
+  <li>Ranking tests were refined to check meaningful behaviour rather than exact LLM wording.</li>
+  <li>Groq JSON parsing was improved to handle markdown fences or extra text.</li>
+  <li>Retrieval behaviour was improved to handle Semantic Scholar rate limits.</li>
+  <li>An accidental nested clone causing duplicate test discovery was removed.</li>
+  <li>SQLite persistence was added and tested.</li>
+</ul>
+</main>
+</body>
+</html>
