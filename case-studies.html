@@ -23,21 +23,21 @@
 <h2>Case Study 1: Explainable Decisions in Agents</h2>
 <p><strong>WHAT:</strong> During the ResearchMate implementation, I added a ranking system that scores retrieved papers and assigns recommendation labels such as “Strongly recommended”, “Recommended”, “Use with caution”, and “Not recommended”.</p>
 
-<p><strong>SO WHAT:</strong> This was important because retrieval alone does not equal usefulness. A search API may return papers that match a keyword but do not properly fit the user’s purpose or level. Without explanation, the user might assume that every retrieved paper is equally relevant. The ranking rubric made the system’s judgement more visible by connecting each recommendation to factors such as topic match, purpose match, audience fit, paper type fit, and source completeness.</p>
+<p><strong>SO WHAT:</strong> This was important because retrieval alone does not equal usefulness. A search API may return papers that match a keyword but do not properly fit the user’s purpose or level. Without explanation, the user might assume that every retrieved paper is equally relevant. The ranking rubric made the system’s judgement more visible by connecting each recommendation to factors such as topic match, purpose match, audience fit, paper type fit, and source completeness. This connects to the wider problem of making multi-agent decisions interpretable and manageable as systems become more complex (Guo et al., 2024).</p>
 
 <p><strong>NOW WHAT:</strong> In future agent systems, I would design explainability from the beginning. A user does not need every internal detail, but they do need to understand why a system recommends, warns against, or deprioritises an output.</p>
 
 <h2>Case Study 2: AI Safety Constraints and Bounded Autonomy</h2>
 <p><strong>WHAT:</strong> ResearchMate uses Groq/Llama for planning, processing, ranking, and evidence assessment, but it does not allow the LLM to control the full system freely. Python controls the workflow, validates outputs, handles API failures, and triggers fallback logic.</p>
 
-<p><strong>SO WHAT:</strong> This mattered because agent autonomy can create risk when outputs are not constrained. LLMs may return invalid JSON, external APIs may fail, or retrieved sources may be only partially relevant. By bounding the agent’s autonomy, ResearchMate became more reliable. The system can act, but only within a controlled structure.</p>
+<p><strong>SO WHAT:</strong> This mattered because agent autonomy can create risk when outputs are not constrained. LLMs may return invalid JSON, external APIs may fail, or retrieved sources may be only partially relevant. By bounding the agent’s autonomy, ResearchMate became more reliable. The system can act, but only within a controlled structure. This reflects the importance of explicit workflow control in multi-agent systems, especially where reasoning and acting are combined (Yao et al., 2023).</p>
 
 <p><strong>NOW WHAT:</strong> In future work, I would define autonomy limits at the start of the design process. I would ask what the agent can do alone, what must be validated, and when the system should stop or ask for human review.</p>
 
 <h2>Case Study 3: Responsible Deployment</h2>
 <p><strong>WHAT:</strong> The final ResearchMate prototype includes limitations, evidence notes, source URLs, and human review reminders. It also processes abstracts rather than full papers.</p>
 
-<p><strong>SO WHAT:</strong> This is important because a polished LLM output can make a system appear more authoritative than it really is. If ResearchMate presented its output as final academic truth, it could mislead users. Responsible deployment means making uncertainty visible and showing what the system can and cannot support.</p>
+<p><strong>SO WHAT:</strong> This is important because a polished LLM output can make a system appear more authoritative than it really is. If ResearchMate presented its output as final academic truth, it could mislead users. Responsible deployment means making uncertainty visible and showing what the system can and cannot support. This is especially relevant in retrieval-supported systems because retrieved context can reduce hallucination risk, but it does not remove the need for judgement (Lewis et al., 2020).</p>
 
 <p><strong>NOW WHAT:</strong> In future AI projects, I would make limitations part of the user experience, not an afterthought. Responsible systems should produce useful outputs while also communicating their boundaries clearly.</p>
 

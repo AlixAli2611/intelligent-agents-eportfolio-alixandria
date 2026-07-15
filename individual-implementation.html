@@ -9,6 +9,7 @@
 <main>
 <nav>
   <a href="index.html">Home</a>
+  <a href="portfolio-overview.html">Portfolio Overview</a>
   <a href="group-project.html">Group Project</a>
   <a href="testing-remediation.html">Testing</a>
   <a href="reflection.html">Reflection</a>
@@ -20,13 +21,13 @@
   <strong>Section focus:</strong> This page explains the final ResearchMate prototype, its workflow, tools, and evidence outputs.
 </section>
 
-<h2>Portfolio Overview</h2>
+<h2>Implementation Overview</h2>
 <p>
-This e-portfolio presents evidence of my learning, development, and applied practice throughout the Intelligent Agents module. The central project is ResearchMate, a multi-agent academic research assistant designed to support the early stages of academic research. The work developed in two phases: first as a group design proposal, and later as my individual implementation of an LLM-powered planning agent.
+The individual implementation phase required me to move from design to practice. This was an important shift because the design proposal was ambitious, but the implementation had to be realistic, tested, and demonstrable. My final ResearchMate prototype accepts a user’s topic, purpose, audience level, and requested number of papers. It then creates a plan, retrieves academic sources from arXiv, Semantic Scholar, and OpenAlex, processes abstracts, ranks papers using a scoring rubric, produces an evidence note, and saves outputs as Markdown, JSON, and SQLite records.
 </p>
 
 <p>
-The individual implementation phase required me to move from design to practice. This was an important shift because the design proposal was ambitious, but the implementation had to be realistic, tested, and demonstrable. My final ResearchMate prototype accepts a user’s topic, purpose, audience level, and requested number of papers. It then creates a plan, retrieves academic sources from arXiv, Semantic Scholar, and OpenAlex, processes abstracts, ranks papers using a scoring rubric, produces an evidence note, and saves outputs as Markdown, JSON, and SQLite records.
+The final implementation used Groq/Llama for reasoning-heavy tasks such as planning, processing, ranking, and evidence assessment. Llama models were suitable for this design because the proposal had already identified Llama-3.3-70B as an accessible LLM option, while Groq was selected for low-latency inference in an interactive multi-agent loop (Grattafiori et al., 2024).
 </p>
 
 <h2>Implemented Workflow</h2>
@@ -45,7 +46,7 @@ The first major artefact is the group design proposal. This proposal demonstrate
 </p>
 
 <p>
-The second artefact is the individual ResearchMate implementation. This includes the Python codebase, agent files, Pydantic models, tests, README, requirements file, output files, screenshots, and GitHub repository. The implementation demonstrates that the project moved beyond design into a functioning prototype that can accept user input, retrieve sources, process results, rank them, and save outputs.
+The second artefact is the individual ResearchMate implementation. This includes the Python codebase, agent files, Pydantic models, tests, README, requirements file, output files, screenshots, and GitHub repository. The implementation demonstrates that the project moved beyond design into a functioning prototype that can accept user input, retrieve sources, process results, rank them, and save outputs. It also reflects an applied version of retrieval-augmented generation because source retrieval is used to ground processing and ranking rather than relying only on model memory (Lewis et al., 2020).
 </p>
 
 <h2>ResearchMate Code Repository</h2>

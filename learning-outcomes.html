@@ -9,6 +9,7 @@
 <main>
 <nav>
   <a href="index.html">Home</a>
+  <a href="portfolio-overview.html">Portfolio Overview</a>
   <a href="group-project.html">Group Project</a>
   <a href="individual-implementation.html">Implementation</a>
   <a href="reflection.html">Reflection</a>
@@ -22,17 +23,17 @@
 
 <h2>Learning Outcome 1: Identify and critically analyse agent-based systems, differentiating between architectures and approaches.</h2>
 <p>
-The group proposal helped me develop this outcome because it required us to compare single-agent and multi-agent approaches. We selected a multi-agent system because academic research involves multiple subtasks, including goal decomposition, retrieval, processing, relevance scoring, and storage. The proposal also introduced a hybrid deliberative-reactive architecture, with the Planning Agent taking a more deliberative role and retrieval/processing agents acting more reactively.
+The group proposal helped me develop this outcome because it required us to compare single-agent and multi-agent approaches. We selected a multi-agent system because academic research involves multiple subtasks, including goal decomposition, retrieval, processing, relevance scoring, and storage. The proposal also introduced a hybrid deliberative-reactive architecture, with the Planning Agent taking a more deliberative role and retrieval/processing agents acting more reactively. This design choice reflects the idea that agents are useful where autonomous, reactive, and proactive components need to coordinate within a wider system (Wooldridge and Jennings, 1995).
 </p>
 
 <h2>Learning Outcome 2: Apply and critically evaluate intelligent agent techniques to real-world problems.</h2>
 <p>
-My individual implementation applied agent-based techniques to a practical academic research problem. Rather than treating the LLM as a general chatbot, I structured it as part of a pipeline. The system had separate agent files, clear responsibilities, and a central orchestrator. I also critically evaluated what should and should not be automated. ResearchMate ranks and organises evidence, but it does not claim to replace human academic judgement.
+My individual implementation applied agent-based techniques to a practical academic research problem. Rather than treating the LLM as a general chatbot, I structured it as part of a pipeline. The system had separate agent files, clear responsibilities, and a central orchestrator. I also critically evaluated what should and should not be automated. ResearchMate ranks and organises evidence, but it does not claim to replace human academic judgement. This reflects the wider challenge in LLM-based multi-agent systems, where workflow and infrastructure decisions strongly shape reliability and usefulness (Guo et al., 2024).
 </p>
 
 <h2>Learning Outcome 3: Deploy appropriate software tools and skills while considering legal, social, ethical, and professional issues.</h2>
 <p>
-The implementation used Python, Groq/Llama, Pydantic, pytest, SQLite, asynchronous retrieval, and academic APIs. However, the technical work also raised ethical and professional issues. The system processes abstracts and metadata rather than full papers, so it needed clear limitations, human review reminders, and transparent source-level outputs to reduce the risk of unsupported claims.
+The implementation used Python, Groq/Llama, Pydantic, pytest, SQLite, asynchronous retrieval, and academic APIs. However, the technical work also raised ethical and professional issues. The system processes abstracts and metadata rather than full papers, so it needed clear limitations, human review reminders, and transparent source-level outputs to reduce the risk of unsupported claims. This connects with retrieval-augmented generation, where external evidence can support model outputs but does not remove the need for careful validation and review (Lewis et al., 2020).
 </p>
 
 <h2>Learning Outcome 4: Develop skills required to be an effective member of a virtual development team.</h2>
