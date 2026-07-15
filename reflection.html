@@ -2,18 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Final Reflection</title>
+  <title>Final Reflective Commentary | Intelligent Agents E-Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<nav><a href="index.html">Home</a></nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="skills-matrix.html">Skills Matrix</a>
+  <a href="references.html">References</a>
+</nav>
+
 <h1>Final Reflective Commentary</h1>
 
-<p>This page will contain the final 1000-word reflective commentary using Rolfe et al.'s WHAT, SO WHAT, NOW WHAT framework.</p>
+<section class="callout">
+  <strong>Reflective framework:</strong> This reflection uses Rolfe, Freshwater and Jasper's (2001) WHAT, SO WHAT, NOW WHAT approach.
+</section>
 
-<h2>Draft Focus</h2>
-<p>The main reflection will explain how my understanding moved from seeing intelligent agents as autonomous LLM-driven systems to understanding them as controlled, validated, explainable, and bounded software systems.</p>
+<p>
+This module changed how I understand intelligent agents. At the beginning, I thought mainly about agents as systems that could use LLMs to complete tasks in a more autonomous way. By the end, my understanding became more practical and more cautious. I now see intelligent agent development as less about giving a model freedom and more about designing structure around that freedom: orchestration, validation, fallback behaviour, explainability, and human review.
+</p>
+
+<p>
+Using Rolfe et al.’s (2001) reflective framework, the “what” of my experience was the design and implementation of ResearchMate, an academic research planning agent. The project started as a group design proposal. We designed ResearchMate as a hybrid multi-agent system with specialist agents for planning, retrieval, processing, ranking, and storage. The proposal was ambitious and drew on BDI planning, ReAct-style replanning, parallel retrieval, vector storage, and stateful orchestration. At that stage, I felt fairly confident because the design made sense conceptually. The agents had clear names, the technologies seemed appropriate, and the workflow matched the academic research problem we were trying to solve.
+</p>
+
+<p>
+However, tutor feedback helped me see that a good design is not only about listing suitable agents and tools. The feedback pointed out areas that were not fully resolved, especially how the system would handle conflicting evidence, how the architecture diagrams matched the written hierarchy, and whether Pydantic was being overused as a safeguard against hallucination. At first, this was frustrating because the report had received a Merit and I knew the group had worked hard. But once I started the individual implementation, I understood the feedback more clearly. These were not small technical comments. They were about whether the system was genuinely reliable and explainable.
+</p>
+
+<p>
+The “so what” of this experience is that implementation exposed the gap between conceptual architecture and working software. In the group proposal, it was easy to say that agents would retrieve, process, rank, and store information. In code, every handoff needed a structure. Every LLM output could fail. Every external API introduced uncertainty. Semantic Scholar could be rate-limited. Groq could return JSON wrapped in extra text. A ranking explanation could vary in wording even when the behaviour was correct. These were not signs that the project was failing; they were normal realities of building agent-based systems.
+</p>
+
+<p>
+Emotionally, the project made me feel both motivated and overwhelmed. I was interested in ResearchMate because it connected directly to academic work and instructional design, but I also felt pressure to make the system “good enough” within the time available. I noticed that when I felt uncertain, my instinct was to keep adding features. The original proposal included ChromaDB, embeddings, PDF parsing, LangGraph, and Chainlit. In practice, trying to implement everything would have made the system weaker because it would have increased complexity without necessarily improving the assessed workflow. A major learning point was accepting that scope control is not the same as doing less. It is choosing what matters most.
+</p>
+
+<p>
+The most important technical learning was that LLM-powered agents need boundaries. In ResearchMate, I used Groq/Llama for reasoning-heavy tasks such as planning, processing, ranking, and evidence assessment. However, Python controlled the workflow and validation. This separation made the system more reliable. The LLM could interpret and summarise, but the code checked whether the output was structured correctly and fell back to deterministic logic when needed. This changed my thinking about autonomy. I no longer see autonomy as something that should simply be maximised. In many cases, the safer and more professional approach is bounded autonomy.
+</p>
+
+<p>
+The project also developed my understanding of explainability. Before this module, I associated explainability mostly with explaining model outputs. Through ResearchMate, I began to see explainability as a broader design principle. The user needs to understand not only what the system produced, but why it treated some papers as useful and others as weak. That is why the final implementation included relevance scores, recommendation labels, source-level summaries, evidence notes, and limitations. This helped address the risk of the system sounding more certain than it should.
+</p>
+
+<p>
+The teamwork element also shaped my learning. The group project involved active collaboration with some members and unequal contribution from another. In my peer evaluation, I reflected that I initially found the unequal workload frustrating. This was partly because I was also balancing significant personal responsibilities and still trying to contribute properly. However, I learned that focusing too much on unfairness can drain energy from the work itself. The more useful response was to work closely with the team members who were participating, communicate clearly, and keep evidence of contributions.
+</p>
+
+<p>
+The “now what” is that I will approach future intelligent agent projects differently. First, I will start with a clearer definition of the agent’s boundaries. I will ask what the agent can decide, what must be validated, and where human review is required. Second, I will treat evidence handling as a core design issue rather than a final output feature. If an agent retrieves information from multiple sources, the design must explain how uncertainty, weak evidence, or conflicting results are managed. Third, I will plan testing earlier. The 24 passing tests in my final implementation gave me more confidence because they showed that the system was not only working once, but had repeatable behaviours across key components.
+</p>
+
+<p>
+Professionally, this module helped me connect technical implementation with responsible practice. ResearchMate is not perfect, and it is not a production system. It works mainly with abstracts and metadata, and some features from the original proposal were deferred. However, building it taught me something more valuable than simply completing a feature list. I learned that intelligent agents require technical judgement, ethical judgement, and project management judgement. A useful agent is not just one that acts; it is one that acts within a structure that makes its actions understandable, testable, and safe enough for the context.
+</p>
+
+<p>
+Overall, this module helped me move from thinking about intelligent agents as exciting autonomous systems to understanding them as carefully designed software systems that need constraints, evidence, transparency, and human accountability.
+</p>
+
+<p class="footer-note">This reflective commentary is intended to sit alongside the artefacts and evidence pages in this e-portfolio.</p>
 </main>
 </body>
 </html>

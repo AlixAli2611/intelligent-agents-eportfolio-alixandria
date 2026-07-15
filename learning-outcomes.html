@@ -2,27 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Learning Outcomes</title>
+  <title>Learning Outcomes | Intelligent Agents E-Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<nav><a href="index.html">Home</a></nav>
-<h1>Learning Outcomes</h1>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="group-project.html">Group Project</a>
+  <a href="individual-implementation.html">Implementation</a>
+  <a href="reflection.html">Reflection</a>
+</nav>
 
-<p>This section maps my module evidence to the Intelligent Agents learning outcomes.</p>
+<h1>Mapping to Module Learning Outcomes</h1>
 
-<h2>LO1: Identify and critically analyse agent-based systems</h2>
-<p>I developed this outcome through the ResearchMate group proposal, where we compared single-agent and multi-agent approaches and selected a modular multi-agent architecture.</p>
+<section class="callout">
+  <strong>Section focus:</strong> This page maps my ResearchMate evidence to the Intelligent Agents module learning outcomes.
+</section>
 
-<h2>LO2: Apply and critically evaluate intelligent agent techniques</h2>
-<p>I applied agent techniques through the individual ResearchMate prototype, which receives a research goal, plans actions, retrieves academic data, processes information, ranks sources, and saves outputs.</p>
+<h2>Learning Outcome 1: Identify and critically analyse agent-based systems, differentiating between architectures and approaches.</h2>
+<p>
+The group proposal helped me develop this outcome because it required us to compare single-agent and multi-agent approaches. We selected a multi-agent system because academic research involves multiple subtasks, including goal decomposition, retrieval, processing, relevance scoring, and storage. The proposal also introduced a hybrid deliberative-reactive architecture, with the Planning Agent taking a more deliberative role and retrieval/processing agents acting more reactively.
+</p>
 
-<h2>LO3: Deploy appropriate software tools ethically and professionally</h2>
-<p>The project used Python, Groq/Llama, Pydantic, SQLite, pytest, and academic APIs while considering hallucination risk, transparency, source limits, and human review.</p>
+<h2>Learning Outcome 2: Apply and critically evaluate intelligent agent techniques to real-world problems.</h2>
+<p>
+My individual implementation applied agent-based techniques to a practical academic research problem. Rather than treating the LLM as a general chatbot, I structured it as part of a pipeline. The system had separate agent files, clear responsibilities, and a central orchestrator. I also critically evaluated what should and should not be automated. ResearchMate ranks and organises evidence, but it does not claim to replace human academic judgement.
+</p>
 
-<h2>LO4: Work effectively as part of a virtual development team</h2>
-<p>The group project developed my teamwork, communication, role negotiation, and resilience in a virtual environment.</p>
+<h2>Learning Outcome 3: Deploy appropriate software tools and skills while considering legal, social, ethical, and professional issues.</h2>
+<p>
+The implementation used Python, Groq/Llama, Pydantic, pytest, SQLite, asynchronous retrieval, and academic APIs. However, the technical work also raised ethical and professional issues. The system processes abstracts and metadata rather than full papers, so it needed clear limitations, human review reminders, and transparent source-level outputs to reduce the risk of unsupported claims.
+</p>
+
+<h2>Learning Outcome 4: Develop skills required to be an effective member of a virtual development team.</h2>
+<p>
+The group project developed my teamwork, communication, and resilience. In my peer evaluation, I reflected that the most productive members communicated regularly through the Group Discussion page, shared documents, and weekly meetings. I also learned that when contribution is unequal, it is more effective to focus energy on cooperative team members and keep the project moving.
+</p>
+
+<p class="footer-note">This section supports the module requirement to show how artefacts relate to the learning outcomes.</p>
 </main>
 </body>
 </html>

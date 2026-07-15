@@ -2,29 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Group Project</title>
+  <title>Group Design Phase | Intelligent Agents E-Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<nav><a href="index.html">Home</a></nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="learning-outcomes.html">Learning Outcomes</a>
+  <a href="individual-implementation.html">Implementation</a>
+  <a href="reflection.html">Reflection</a>
+</nav>
+
 <h1>Group Design Phase</h1>
 
-<p>The group design phase focused on ResearchMate as a hybrid multi-agent academic research assistant.</p>
+<section class="callout">
+  <strong>Section focus:</strong> This page summarises the group design phase, my contribution, and how tutor feedback informed the later implementation.
+</section>
 
-<h2>Key Evidence</h2>
-<ul>
-  <li>Kickoff meeting discussion</li>
-  <li>Group design proposal</li>
-  <li>Tutor feedback</li>
-  <li>Peer and self-evaluation</li>
-</ul>
+<h2>Project Context</h2>
+<p>
+The group design phase focused on creating a proposed intelligent agent system rather than a fully deployed product. ResearchMate was designed to receive a research request, break it into smaller tasks, search academic sources, process and summarise results, rank useful sources, and save or present the final output. The original design identified specialist agents for planning, retrieval, processing, ranking, and storage. This helped me understand why multi-agent systems are useful when a task involves several distinct types of reasoning or processing.
+</p>
 
 <h2>My Contribution</h2>
-<p>My main contribution was in research and agent architecture. I helped shape the project concept, contributed to early planning documents, supported architecture development, and helped refine the final report.</p>
+<p>
+My contribution began during the kickoff stage. The group agreed that ResearchMate would be a multi-agent academic research assistant, and I contributed to the research and architecture direction. This included helping shape the project concept, contributing to early planning documents, supporting architecture development, and helping refine the final report.
+</p>
 
-<h2>Response to Feedback</h2>
-<p>The tutor feedback identified three important issues: conflicting evidence handling, inconsistency between architecture diagrams and written hierarchy, and over-reliance on Pydantic as a factual safeguard. These points directly informed my individual implementation.</p>
+<p>
+In practice, my contribution went beyond only writing a section. I helped create early planning documents, contributed to the structure of the report, reviewed comments, and worked with active team members to keep the project moving. In my self-evaluation, I identified being proactive as one of my strengths, while also recognising that I need to become calmer when I feel everything is on a tight timeline and more outward-facing during meetings.
+</p>
+
+<h2>Response to Tutor Feedback</h2>
+<p>
+The tutor feedback on the group proposal identified three important issues. The first was evidence handling. The proposal stated that the system would retrieve and process academic material, but it did not fully explain how conflicting, weak, or peripheral evidence would be handled. This became a major improvement in my individual implementation.
+</p>
+
+<p>
+The second issue was orchestration. The proposal described a strict hierarchy, but the diagram suggested some direct flow between specialist agents. In the final implementation, I addressed this by using <code>main.py</code> as the central controller. Each agent performs a defined function and returns output to the orchestrator, making the workflow clearer and easier to test.
+</p>
+
+<p>
+The third issue was the role of Pydantic. In the proposal, Pydantic was positioned as an important safeguard. However, tutor feedback rightly pointed out that Pydantic validates structure, not factual truth. In the final implementation, I narrowed its role. Pydantic ensures that objects such as papers, plans, and ranked outputs have the expected fields and types. It does not prove that the content is true.
+</p>
+
+<h2>Collaboration Reflection</h2>
+<p>
+The teamwork experience was not perfect. One challenge was unequal contribution. I found this frustrating at first, especially because other members were also managing personal responsibilities but still participated actively. However, I learned that spending too much energy on unequal participation can reduce progress. The more useful response was to work closely with the team members who were participating, communicate clearly, and keep evidence of contributions.
+</p>
+
+<p class="footer-note">This section links the group design phase to my later individual implementation decisions.</p>
 </main>
 </body>
 </html>

@@ -2,28 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Testing and Remediation</title>
+  <title>Testing and Remediation | Intelligent Agents E-Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<nav><a href="index.html">Home</a></nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="individual-implementation.html">Implementation</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="reflection.html">Reflection</a>
+</nav>
+
 <h1>Testing and Remediation</h1>
 
-<p>The final implementation was tested using pytest and produced 24 passing tests.</p>
+<section class="callout">
+  <strong>Section focus:</strong> This page documents testing evidence, debugging, and remediation activities from the ResearchMate implementation.
+</section>
+
+<h2>Testing Evidence</h2>
+<p>
+The final codebase passed 24 pytest tests. These covered planning, processing, ranking, evidence assessment, output storage, SQLite persistence, validation, and fallback logic.
+</p>
 
 <h2>Testing Covered</h2>
 <ul>
   <li>Planning agent behaviour</li>
   <li>Processing agent output</li>
   <li>Ranking and recommendation logic</li>
-  <li>Evidence assessment</li>
+  <li>Evidence assessment behaviour</li>
   <li>Markdown and JSON output generation</li>
-  <li>SQLite persistence</li>
+  <li>SQLite database persistence</li>
   <li>LLM JSON validation and fallback logic</li>
 </ul>
 
 <h2>Remediation Activities</h2>
+<p>
+The remediation notes document issues encountered during development, including Groq JSON parsing, LLM output variability, Semantic Scholar rate limits, and accidental duplicate test discovery caused by a nested clone.
+</p>
+
 <ul>
   <li>Ranking tests were refined to check meaningful behaviour rather than exact LLM wording.</li>
   <li>Groq JSON parsing was improved to handle markdown fences or extra text.</li>
@@ -31,6 +48,13 @@
   <li>An accidental nested clone causing duplicate test discovery was removed.</li>
   <li>SQLite persistence was added and tested.</li>
 </ul>
+
+<h2>Why Testing Mattered</h2>
+<p>
+Testing helped me see that an agent-based system needs repeatable behaviours, not just a successful demonstration once. Because LLM outputs can vary, the tests could not always rely on exact wording. Instead, they needed to check structure, behaviour, and meaning. This was an important learning point because intelligent agent systems often combine deterministic code with probabilistic model outputs.
+</p>
+
+<p class="footer-note">Testing gave me confidence that ResearchMate worked as a structured prototype rather than only as a one-off terminal demonstration.</p>
 </main>
 </body>
 </html>

@@ -2,29 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Individual Implementation</title>
+  <title>Individual Implementation | Intelligent Agents E-Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<nav><a href="index.html">Home</a></nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="group-project.html">Group Project</a>
+  <a href="testing-remediation.html">Testing</a>
+  <a href="reflection.html">Reflection</a>
+</nav>
+
 <h1>Individual Implementation: ResearchMate</h1>
 
-<p>My individual implementation developed ResearchMate into a working LLM-powered academic research planning agent.</p>
+<section class="callout">
+  <strong>Section focus:</strong> This page explains the final ResearchMate prototype, its workflow, tools, and evidence outputs.
+</section>
+
+<h2>Portfolio Overview</h2>
+<p>
+This e-portfolio presents evidence of my learning, development, and applied practice throughout the Intelligent Agents module. The central project is ResearchMate, a multi-agent academic research assistant designed to support the early stages of academic research. The work developed in two phases: first as a group design proposal, and later as my individual implementation of an LLM-powered planning agent.
+</p>
+
+<p>
+The individual implementation phase required me to move from design to practice. This was an important shift because the design proposal was ambitious, but the implementation had to be realistic, tested, and demonstrable. My final ResearchMate prototype accepts a user’s topic, purpose, audience level, and requested number of papers. It then creates a plan, retrieves academic sources from arXiv, Semantic Scholar, and OpenAlex, processes abstracts, ranks papers using a scoring rubric, produces an evidence note, and saves outputs as Markdown, JSON, and SQLite records.
+</p>
 
 <h2>Implemented Workflow</h2>
-<ul>
-  <li>User enters topic, purpose, audience level, and requested number of papers.</li>
-  <li>Planning Agent creates an ordered plan.</li>
-  <li>Retrieval Agent queries arXiv, Semantic Scholar, and OpenAlex.</li>
-  <li>Processing Agent creates summaries, key terms, and paper type labels.</li>
-  <li>Ranking Agent scores papers and assigns recommendation labels.</li>
-  <li>Evidence assessment produces a cautious evidence note.</li>
-  <li>Storage saves Markdown, JSON, and SQLite outputs.</li>
-</ul>
+<div class="card-grid">
+  <div class="card"><h3>1. Goal Input</h3><p>The user enters a topic, purpose, audience level, and number of papers.</p></div>
+  <div class="card"><h3>2. Planning</h3><p>The Planning Agent generates a structured research plan.</p></div>
+  <div class="card"><h3>3. Retrieval</h3><p>The Retrieval Agent queries arXiv, Semantic Scholar, and OpenAlex.</p></div>
+  <div class="card"><h3>4. Processing</h3><p>The Processing Agent creates summaries, key terms, and paper type labels.</p></div>
+  <div class="card"><h3>5. Ranking</h3><p>The Ranking Agent scores papers and assigns recommendation labels.</p></div>
+  <div class="card"><h3>6. Storage</h3><p>The Storage Agent saves Markdown, JSON, and SQLite outputs.</p></div>
+</div>
+
+<h2>Evidence of Work and Artefacts</h2>
+<p>
+The first major artefact is the group design proposal. This proposal demonstrates our understanding of intelligent agent architecture and system design. It described ResearchMate as a hybrid multi-agent system using Llama-3.3-70B via Groq, arXiv, Semantic Scholar, OpenAlex, ChromaDB, SQLite, Pydantic, LangGraph, Chainlit, and asyncio. Although not every component was implemented later, the proposal shows the design ambition and reasoning behind the original architecture.
+</p>
+
+<p>
+The second artefact is the individual ResearchMate implementation. This includes the Python codebase, agent files, Pydantic models, tests, README, requirements file, output files, screenshots, and GitHub repository. The implementation demonstrates that the project moved beyond design into a functioning prototype that can accept user input, retrieve sources, process results, rank them, and save outputs.
+</p>
 
 <h2>ResearchMate Code Repository</h2>
-<p><a href="https://github.com/AlixAli2611/ResearchMate">ResearchMate GitHub Repository</a></p>
+<p>
+The final implementation is available here:
+<a href="https://github.com/AlixAli2611/ResearchMate">ResearchMate GitHub Repository</a>.
+</p>
+
+<p class="footer-note">ResearchMate supports research organisation while preserving human academic judgement.</p>
 </main>
 </body>
 </html>
